@@ -28,6 +28,8 @@ class CatListCell: UICollectionViewCell {
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         
+        imageView.backgroundColor = .red
+        
         return imageView
     }()
     
