@@ -8,6 +8,7 @@ struct ApiRequestResult {
 
 enum ApiRequest {
     static let baseURLPath = "http://thecatapi.com/api/images"
+    static let apiKey = "MjQ2MTkz"
     
     case getCatImages
     
@@ -15,7 +16,7 @@ enum ApiRequest {
         let result: (path: String, parameters: [String: AnyObject]?) = {
             switch self {
             case .getCatImages:
-                return ("/get?format=xml&results_per_page=20", nil)
+                return ("/get?api_key=\(ApiRequest.apiKey)&format=xml&results_per_page=20", nil)
             }
         }()
         

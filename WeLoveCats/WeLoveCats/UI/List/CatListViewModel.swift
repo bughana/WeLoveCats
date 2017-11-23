@@ -4,14 +4,9 @@ import Foundation
 enum CatListType {
     case all
     case favourites
-}
-
-class CatListViewModel {
-    
-    var imageUrls: [URL] = []
     
     var pageTitle: String {
-        switch type {
+        switch self {
         case .all:
             return "All these cats"
         case .favourites:
@@ -19,15 +14,39 @@ class CatListViewModel {
         }
     }
     
+    var apiRequest: ApiRequest {
+        switch self {
+        case .all:
+            return .getCatImages
+        case .favourites:
+            return .getCatImages
+        }
+    }
+}
+
+class CatListViewModel {
+    
+    var imageUrls: [URL] = []
+    
+    var pageTitle: String {
+        return type.pageTitle
+    }
+    
     private let networkService = NetworkService()
     private let type: CatListType
     
+    // MARK: - Public interface
     init(type: CatListType) {
         self.type = type
     }
     
     func getCatImageUrls(_ completion: @escaping (_ shouldReload: Bool) -> ()) {
-        networkService.apiOperation(.getCatImages) { [weak self] result in
+        getCatImageUrls(for: type, completion)
+    }
+    
+    // MARK: - Private Helper
+    private func getCatImageUrls(for type: CatListType, _ completion: @escaping (_ shouldReload: Bool) -> ()) {
+        networkService.apiOperation(type.apiRequest) { [weak self] result in
             if let urls = result.imageUrls {
                 self?.imageUrls = urls
                 completion(true)
