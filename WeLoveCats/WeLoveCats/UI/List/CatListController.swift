@@ -13,10 +13,10 @@ class CatListController: UIViewController, UICollectionViewDataSource, UICollect
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        view.addSubview(pageTitleView)
         view.addSubview(collectionView)
-        constrain(collectionView, view) { collectionView, superview in
-            collectionView.edges == superview.edges
-        }
+        constrainSubviews()
         
         viewModel.getCatImageUrls() { [weak self] shouldReload in
             if shouldReload {
@@ -48,13 +48,41 @@ class CatListController: UIViewController, UICollectionViewDataSource, UICollect
         return cell
     }
     
+    // MARK: - Private: Autolayout
+    private func constrainSubviews() {
+        constrain(pageTitleView, collectionView, view) { pageTitleView, collectionView, superview in
+            pageTitleView.top == superview.top
+            pageTitleView.left == superview.left
+            pageTitleView.right == superview.right
+            pageTitleView.height == 84
+            
+            collectionView.top == pageTitleView.bottom
+            collectionView.left == superview.left
+            collectionView.right == superview.right
+            collectionView.bottom == superview.bottom
+        }
+    }
+    
     // MARK: - Private: CollectionView + Layout
+    private lazy var pageTitleView: UILabel = {
+        let pageTitleView = UILabel()
+        
+        pageTitleView.text = viewModel.pageTitle
+        pageTitleView.textAlignment = .center
+        pageTitleView.font = .boldSystemFont(ofSize: 24)
+        pageTitleView.backgroundColor = .white
+        pageTitleView.layer.borderColor = UIColor.lightGray.cgColor
+        pageTitleView.layer.borderWidth = 1
+        
+        return pageTitleView
+    }()
+    
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
         
         collectionView.backgroundColor = .white
         collectionView.register(CatListCell.self, forCellWithReuseIdentifier: cellIdentifier)
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        collectionView.contentInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         
         return collectionView
     }()

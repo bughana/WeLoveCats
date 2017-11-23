@@ -21,8 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setupCatLists() {
         guard let rootController = window?.rootViewController as? UITabBarController, let catList = rootController.viewControllers?.first as? CatListController else { return }
         
-        let viewModel = CatListViewModel()
-        catList.setup(with: viewModel)
+        let catListViewModel = CatListViewModel(type: .all)
+        catList.setup(with: catListViewModel)
+        
+        guard let favourites = rootController.viewControllers?.last as? CatListController else { return }
+        
+        let favoritesViewModel = CatListViewModel(type: .favourites)
+        favourites.setup(with: favoritesViewModel)
     }
 }
 
