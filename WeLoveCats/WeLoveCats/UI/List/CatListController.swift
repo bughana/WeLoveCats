@@ -18,7 +18,11 @@ class CatListController: UIViewController, UICollectionViewDataSource, UICollect
             collectionView.edges == superview.edges
         }
         
-        viewModel.getCatImageUrls()
+        viewModel.getCatImageUrls() { [weak self] shouldReload in
+            if shouldReload {
+                self?.collectionView.reloadData()
+            }
+        }
     }
     
     // MARK: - Public: Setup
@@ -32,12 +36,14 @@ class CatListController: UIViewController, UICollectionViewDataSource, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return viewModel.imageUrls.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! CatListCell
+        
+        let url = viewModel.imageUrls[indexPath.row]
+        cell.imageView.setImageWithUrl(url, completion: nil)
         
         return cell
     }

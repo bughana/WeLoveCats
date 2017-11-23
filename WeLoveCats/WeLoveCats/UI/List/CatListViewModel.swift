@@ -5,10 +5,14 @@ class CatListViewModel {
     
     private let networkService = NetworkService()
     
-    func getCatImageUrls() -> [URL] {
-        networkService.apiOperation(.getCatImages) { result in
-            print(result)
+    var imageUrls: [URL] = []
+    
+    func getCatImageUrls(_ completion: @escaping (_ shouldReload: Bool) -> ()) {
+        networkService.apiOperation(.getCatImages) { [weak self] result in
+            if let urls = result.imageUrls {
+                self?.imageUrls = urls
+                completion(true)
+            }
         }
-        return []
     }
 }

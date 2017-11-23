@@ -20,6 +20,7 @@
 		5A817E581FC75CDF00F6D5DD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A817E571FC75CDF00F6D5DD /* NetworkService.swift */; };
 		5A817E5A1FC75EDA00F6D5DD /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A817E591FC75EDA00F6D5DD /* ApiRequest.swift */; };
 		5A817E5F1FC760B100F6D5DD /* CatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A817E5E1FC760B100F6D5DD /* CatListViewModel.swift */; };
+		5A817E621FC770DB00F6D5DD /* UIImageView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A817E611FC770DB00F6D5DD /* UIImageView+Custom.swift */; };
 		60DF927C959696D51F3F0581 /* Pods_WeLoveCatsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D7AC2B28CE69CAC798A5CD /* Pods_WeLoveCatsUITests.framework */; };
 		B8DC4BA352ED6FA9D69169E2 /* Pods_WeLoveCats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43A533915B7AB086838B7F7 /* Pods_WeLoveCats.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		5A817E571FC75CDF00F6D5DD /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		5A817E591FC75EDA00F6D5DD /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		5A817E5E1FC760B100F6D5DD /* CatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListViewModel.swift; sourceTree = "<group>"; };
+		5A817E611FC770DB00F6D5DD /* UIImageView+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Custom.swift"; sourceTree = "<group>"; };
 		6B31D5A9DC0538A3839CF98D /* Pods-WeLoveCats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeLoveCats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeLoveCats/Pods-WeLoveCats.debug.xcconfig"; sourceTree = "<group>"; };
 		CD820EB5E01697F51BCB3A89 /* Pods-WeLoveCatsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeLoveCatsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeLoveCatsUITests/Pods-WeLoveCatsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D006433B21409AF5C4A4F042 /* Pods-WeLoveCats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeLoveCats.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeLoveCats/Pods-WeLoveCats.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		5A817E211FC7509C00F6D5DD /* WeLoveCats */ = {
 			isa = PBXGroup;
 			children = (
+				5A817E601FC770C200F6D5DD /* Utils */,
 				5A817E561FC75CCA00F6D5DD /* Networking */,
 				5A817E521FC7550F00F6D5DD /* UI */,
 				5A817E221FC7509C00F6D5DD /* AppDelegate.swift */,
@@ -189,6 +192,15 @@
 				5A817E591FC75EDA00F6D5DD /* ApiRequest.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		5A817E601FC770C200F6D5DD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5A817E611FC770DB00F6D5DD /* UIImageView+Custom.swift */,
+			);
+			name = Utils;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		D8531496B611ED75D1559E8B /* Pods */ = {
@@ -490,6 +502,7 @@
 				5A817E551FC7555E00F6D5DD /* CatListCell.swift in Sources */,
 				5A817E5A1FC75EDA00F6D5DD /* ApiRequest.swift in Sources */,
 				5A817E271FC7509C00F6D5DD /* SecondViewController.swift in Sources */,
+				5A817E621FC770DB00F6D5DD /* UIImageView+Custom.swift in Sources */,
 				5A817E231FC7509C00F6D5DD /* AppDelegate.swift in Sources */,
 				5A817E251FC7509C00F6D5DD /* CatListController.swift in Sources */,
 			);

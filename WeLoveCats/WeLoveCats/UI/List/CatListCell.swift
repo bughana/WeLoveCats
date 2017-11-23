@@ -25,10 +25,12 @@ class CatListCell: UICollectionViewCell {
     }
     
     // MARK: - Subviews
-    private lazy var imageView: UIImageView = {
+    lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         
-        imageView.backgroundColor = .red
+        imageView.backgroundColor = .lightGray
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         
         return imageView
     }()

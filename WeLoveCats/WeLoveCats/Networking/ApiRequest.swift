@@ -2,7 +2,7 @@
 import Foundation
 
 struct ApiRequestResult {
-    let jsonResponse: Any?
+    let imageUrls: [URL]?
     let error: Error?
 }
 
@@ -15,7 +15,7 @@ enum ApiRequest {
         let result: (path: String, parameters: [String: AnyObject]?) = {
             switch self {
             case .getCatImages:
-                return ("/get", nil)
+                return ("/get?format=xml&results_per_page=20", nil)
             }
         }()
         
