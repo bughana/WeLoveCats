@@ -6,6 +6,7 @@ target 'WeLoveCats' do
   use_frameworks!
 
   # Pods for WeLoveCats
+  pod 'Cartography'
 
   target 'WeLoveCatsTests' do
     inherit! :search_paths

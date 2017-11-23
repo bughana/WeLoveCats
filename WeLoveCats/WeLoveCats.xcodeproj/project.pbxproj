@@ -16,6 +16,7 @@
 		5A817E2F1FC7509C00F6D5DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A817E2D1FC7509C00F6D5DD /* LaunchScreen.storyboard */; };
 		5A817E3A1FC7509C00F6D5DD /* WeLoveCatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A817E391FC7509C00F6D5DD /* WeLoveCatsTests.swift */; };
 		5A817E451FC7509C00F6D5DD /* WeLoveCatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A817E441FC7509C00F6D5DD /* WeLoveCatsUITests.swift */; };
+		5A817E551FC7555E00F6D5DD /* CatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A817E541FC7555E00F6D5DD /* CatListCell.swift */; };
 		60DF927C959696D51F3F0581 /* Pods_WeLoveCatsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D7AC2B28CE69CAC798A5CD /* Pods_WeLoveCatsUITests.framework */; };
 		B8DC4BA352ED6FA9D69169E2 /* Pods_WeLoveCats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43A533915B7AB086838B7F7 /* Pods_WeLoveCats.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		5A817E401FC7509C00F6D5DD /* WeLoveCatsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeLoveCatsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A817E441FC7509C00F6D5DD /* WeLoveCatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeLoveCatsUITests.swift; sourceTree = "<group>"; };
 		5A817E461FC7509C00F6D5DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A817E541FC7555E00F6D5DD /* CatListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListCell.swift; sourceTree = "<group>"; };
 		6B31D5A9DC0538A3839CF98D /* Pods-WeLoveCats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeLoveCats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeLoveCats/Pods-WeLoveCats.debug.xcconfig"; sourceTree = "<group>"; };
 		CD820EB5E01697F51BCB3A89 /* Pods-WeLoveCatsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeLoveCatsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeLoveCatsUITests/Pods-WeLoveCatsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D006433B21409AF5C4A4F042 /* Pods-WeLoveCats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeLoveCats.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeLoveCats/Pods-WeLoveCats.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,9 +128,8 @@
 		5A817E211FC7509C00F6D5DD /* WeLoveCats */ = {
 			isa = PBXGroup;
 			children = (
+				5A817E521FC7550F00F6D5DD /* UI */,
 				5A817E221FC7509C00F6D5DD /* AppDelegate.swift */,
-				5A817E241FC7509C00F6D5DD /* FirstViewController.swift */,
-				5A817E261FC7509C00F6D5DD /* SecondViewController.swift */,
 				5A817E281FC7509C00F6D5DD /* Main.storyboard */,
 				5A817E2B1FC7509C00F6D5DD /* Assets.xcassets */,
 				5A817E2D1FC7509C00F6D5DD /* LaunchScreen.storyboard */,
@@ -153,6 +154,24 @@
 				5A817E461FC7509C00F6D5DD /* Info.plist */,
 			);
 			path = WeLoveCatsUITests;
+			sourceTree = "<group>";
+		};
+		5A817E521FC7550F00F6D5DD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5A817E531FC7552B00F6D5DD /* List */,
+				5A817E261FC7509C00F6D5DD /* SecondViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		5A817E531FC7552B00F6D5DD /* List */ = {
+			isa = PBXGroup;
+			children = (
+				5A817E241FC7509C00F6D5DD /* FirstViewController.swift */,
+				5A817E541FC7555E00F6D5DD /* CatListCell.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 		D8531496B611ED75D1559E8B /* Pods */ = {
@@ -449,6 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A817E551FC7555E00F6D5DD /* CatListCell.swift in Sources */,
 				5A817E271FC7509C00F6D5DD /* SecondViewController.swift in Sources */,
 				5A817E231FC7509C00F6D5DD /* AppDelegate.swift in Sources */,
 				5A817E251FC7509C00F6D5DD /* FirstViewController.swift in Sources */,

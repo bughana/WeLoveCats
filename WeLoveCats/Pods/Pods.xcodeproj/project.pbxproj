@@ -7,61 +7,131 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1306083A22456E11924E10EB2D0B245F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		05C1C6C0B246E3C5FDF06B2A0BB63F0D /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9967B43FC984467CE65671A518AB59AB /* View.swift */; };
+		067B84F7E9EFBEAFDC824931CAAD2051 /* Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F430318810F981930595CBFAA3800CB /* Align.swift */; };
+		1431619A2565DD8EAB817240E078707C /* LayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6E4CF523C6C377E60834CD9A194C90 /* LayoutProxy.swift */; };
+		22B60CFF6E57EB6DF8CCA5D2CAC3178C /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ACEDB161A4797D6EEFC4F790099345 /* Priority.swift */; };
+		3F2391D80C5AE124D6E13AD3FABFFE01 /* Constrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9592FA99854F4CE27000C2DC8FF3CF3 /* Constrain.swift */; };
 		4D63D8464DDD93940F55199251082060 /* Pods-WeLoveCatsUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E8BE28DD8A2DC33E7BAC290BE47F3546 /* Pods-WeLoveCatsUITests-dummy.m */; };
-		61FB2726D8F2112D5427F5A03561CC89 /* Pods-WeLoveCats-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7904E6A02DF844C307A5044B8ED8F9F9 /* Pods-WeLoveCats-dummy.m */; };
+		56EBA0C77344F63CA6A36265A6496A71 /* LayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF6E3F1FB9EC741DDE89F903AE74E60 /* LayoutSupport.swift */; };
+		5CAA19E0EB7CA9EB6047A3E43EC1FC8F /* ConstraintGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83E525E9A54CDD0B28A196C7621F590 /* ConstraintGroup.swift */; };
+		5F5D3FB5718F4673DC293DA7D97EF046 /* Compound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BF9D30A7D79EA0B749B084D52331BC /* Compound.swift */; };
 		671AC4570D540C38C7C462EC8E371BF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		697414FCC3C6F8176768FFDDEC73A108 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9831F22C8E22002F58271FB9E67DFD0 /* Expression.swift */; };
+		6FBD4B684936450BD7CD0155347BB4EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		74BD0664EEC77366D314DA22DD4E721F /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F91DA0120F16DF151739A06D03ED8B /* Size.swift */; };
+		7965A04590F67375EC65249F774B3F6B /* Distribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB8A3D61D9F977FA15E2F3C78CB79B /* Distribute.swift */; };
+		88B21B225B2D6BFAB3F50B88495299F1 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E50FB36FB9D722735A574243EF6FE1 /* Point.swift */; };
+		8B86853FF78B888FB426355F716B81D7 /* Pods-WeLoveCats-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E87ED7DEE9695486CF44DF0ED8AC3709 /* Pods-WeLoveCats-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		939697260844B6A4D88E3C3B30B36D64 /* Pods-WeLoveCatsTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C44FB5EBAA6AFD239B3DCF9CCD6BC051 /* Pods-WeLoveCatsTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9613304482D831283A7CC38CE9B11F77 /* Pods-WeLoveCats-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7904E6A02DF844C307A5044B8ED8F9F9 /* Pods-WeLoveCats-dummy.m */; };
+		9B71D4856DF9CFE5715EDF4E5B3B2844 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E558DCCD834906B5CBB7899487C0CF /* ViewUtils.swift */; };
+		9C7E8D85506FA06C506A330B200FCEE7 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202A04C706F45EC3E6A8E98A55EE95A1 /* Context.swift */; };
+		A084DDD7233A950676D60FCB4FA8BE74 /* Edges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D365FAC962F7716E8BE2862F60AAE09 /* Edges.swift */; };
 		A0C8A3C67C698D35FFC50C3E2B5D636E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		C3D78D08078340069837B3133A139FE3 /* Pods-WeLoveCats-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E87ED7DEE9695486CF44DF0ED8AC3709 /* Pods-WeLoveCats-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A67286FF819C5C943D027E9C40DF456D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A12A8BE5E12427836BC20731B59CC4C /* Extensions.swift */; };
+		A7BD4B74A484170A23FF6C7611A11B40 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDCF78CBF68D57A888B39C1FDC4B63F /* Property.swift */; };
+		AE7ACD648B84D1C8645049118FE42D54 /* Cartography-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE97589138731C11804510B0115DAA4 /* Cartography-dummy.m */; };
+		C2E2993258D9072061A389E518053F8B /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722F287D12FECC556BB6057BB76E87CF /* Constraint.swift */; };
+		C8B256F023253D487CA1BA8DFE7D0BA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		CD587D5E28B0428E3B4163F1604D26BF /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9EC4C757DBCE8EC019BF49AEFE4564 /* Edge.swift */; };
 		D56FC22671425310CAB69C0AC686516F /* Pods-WeLoveCatsUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1FCF3F6AD67F875B857ABB8D38A192 /* Pods-WeLoveCatsUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBC0D8FEB6A8101C977332E8BC16E641 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D606E96564743DB0DF8FCED36FD4B7A7 /* Dimension.swift */; };
 		E54E335E8F08EA0435AC183EF1AD235C /* Pods-WeLoveCatsTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF4388DB9A7222AD62410EF7AFA2455B /* Pods-WeLoveCatsTests-dummy.m */; };
+		FC27B916EC313A166CE2704745CB14C0 /* Coefficients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099B41F154B627B59912C0C6C9B32AFE /* Coefficients.swift */; };
+		FE4D13CA6A4999D13875761E5100C1A0 /* Cartography-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8342D1F76402CC736E7F3B64D5B0AF7A /* Cartography-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F96535049D5FF594692C03D84D0CC5EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 544212980401A6DA7806F65EAD8C6637;
+			remoteInfo = Cartography;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0511BB9DE42F86AA22C8103181E74676 /* Pods-WeLoveCatsTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-WeLoveCatsTests.modulemap"; sourceTree = "<group>"; };
-		0AAC6D5BF1159846AC666D2EDF703946 /* Pods_WeLoveCatsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WeLoveCatsTests.framework; path = "Pods-WeLoveCatsTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		099B41F154B627B59912C0C6C9B32AFE /* Coefficients.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coefficients.swift; path = Cartography/Coefficients.swift; sourceTree = "<group>"; };
 		0C1FCF3F6AD67F875B857ABB8D38A192 /* Pods-WeLoveCatsUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeLoveCatsUITests-umbrella.h"; sourceTree = "<group>"; };
+		0CE97589138731C11804510B0115DAA4 /* Cartography-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cartography-dummy.m"; sourceTree = "<group>"; };
+		0DDCF78CBF68D57A888B39C1FDC4B63F /* Property.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Property.swift; path = Cartography/Property.swift; sourceTree = "<group>"; };
 		16C01080EC679EA427D0EEBBFC327163 /* Pods-WeLoveCats-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeLoveCats-acknowledgements.plist"; sourceTree = "<group>"; };
 		1765DF6E0C27CA0C1D4CE14F5821936E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A5CF1D2E47C36892304EDA3039B053B /* Pods-WeLoveCatsUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WeLoveCatsUITests-frameworks.sh"; sourceTree = "<group>"; };
+		202A04C706F45EC3E6A8E98A55EE95A1 /* Context.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Context.swift; path = Cartography/Context.swift; sourceTree = "<group>"; };
 		226EB222883F06BAD265654A8D06BAB1 /* Pods-WeLoveCatsUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeLoveCatsUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		23AB8A3D61D9F977FA15E2F3C78CB79B /* Distribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Distribute.swift; path = Cartography/Distribute.swift; sourceTree = "<group>"; };
 		2AE6AE86694431154A5AFD7966B7E4DB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D365FAC962F7716E8BE2862F60AAE09 /* Edges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edges.swift; path = Cartography/Edges.swift; sourceTree = "<group>"; };
 		31212B5A13096457A6A135A39D32E94C /* Pods-WeLoveCatsUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WeLoveCatsUITests-resources.sh"; sourceTree = "<group>"; };
-		33FFA75C895B3873DF26BCC724AA6352 /* Pods_WeLoveCatsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WeLoveCatsUITests.framework; path = "Pods-WeLoveCatsUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32E558DCCD834906B5CBB7899487C0CF /* ViewUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewUtils.swift; path = Cartography/ViewUtils.swift; sourceTree = "<group>"; };
 		3404180365BC4BB67EC74B47B7CD48B3 /* Pods-WeLoveCats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeLoveCats.debug.xcconfig"; sourceTree = "<group>"; };
+		38E50FB36FB9D722735A574243EF6FE1 /* Point.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Point.swift; path = Cartography/Point.swift; sourceTree = "<group>"; };
+		39B905D6F8A6F41DE7C3570416E6FC31 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F430318810F981930595CBFAA3800CB /* Align.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Align.swift; path = Cartography/Align.swift; sourceTree = "<group>"; };
 		429E7DCF85A9B920823E2009B9CC2E31 /* Pods-WeLoveCatsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeLoveCatsTests.release.xcconfig"; sourceTree = "<group>"; };
+		42BF9D30A7D79EA0B749B084D52331BC /* Compound.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compound.swift; path = Cartography/Compound.swift; sourceTree = "<group>"; };
 		47EADBB37237F1B0E737330B681C7948 /* Pods-WeLoveCatsTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeLoveCatsTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		4846C70F21362A06CE234F27F93B9B4A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59FD051E7B7FEE3DD7C60815B63C33BE /* Cartography-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cartography-prefix.pch"; sourceTree = "<group>"; };
 		5EAFF6438FE1098D17540EA196A153CD /* Pods-WeLoveCatsTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WeLoveCatsTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6B6E4CF523C6C377E60834CD9A194C90 /* LayoutProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutProxy.swift; path = Cartography/LayoutProxy.swift; sourceTree = "<group>"; };
+		6C9B97246EAEFE1A093421A17B3A2202 /* Pods_WeLoveCatsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WeLoveCatsTests.framework; path = "Pods-WeLoveCatsTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		722F287D12FECC556BB6057BB76E87CF /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Cartography/Constraint.swift; sourceTree = "<group>"; };
 		7904E6A02DF844C307A5044B8ED8F9F9 /* Pods-WeLoveCats-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeLoveCats-dummy.m"; sourceTree = "<group>"; };
 		7AC076B60D0A47C3D8AFD858602A0F01 /* Pods-WeLoveCatsUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-WeLoveCatsUITests.modulemap"; sourceTree = "<group>"; };
 		7B730F814A7587BD210C101927398EA6 /* Pods-WeLoveCats-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WeLoveCats-frameworks.sh"; sourceTree = "<group>"; };
 		7EE45019FAA258E7C0D44F55C66849C9 /* Pods-WeLoveCats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeLoveCats.release.xcconfig"; sourceTree = "<group>"; };
+		8342D1F76402CC736E7F3B64D5B0AF7A /* Cartography-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cartography-umbrella.h"; sourceTree = "<group>"; };
 		84E5E361DA19EB4F2EF1614A3CDEB9A5 /* Pods-WeLoveCatsTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WeLoveCatsTests-resources.sh"; sourceTree = "<group>"; };
+		87F91DA0120F16DF151739A06D03ED8B /* Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Size.swift; path = Cartography/Size.swift; sourceTree = "<group>"; };
+		8A12A8BE5E12427836BC20731B59CC4C /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Cartography/Extensions.swift; sourceTree = "<group>"; };
+		8A45AB4BA868E6A22C89EC1ECD941016 /* Cartography.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Cartography.modulemap; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96CBDFF0AA6B16FD0068D39AC5A97655 /* Pods-WeLoveCats-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WeLoveCats-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9967B43FC984467CE65671A518AB59AB /* View.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = View.swift; path = Cartography/View.swift; sourceTree = "<group>"; };
 		9B862C0F06914DA96D59CC1DC3BF9813 /* Pods-WeLoveCats.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-WeLoveCats.modulemap"; sourceTree = "<group>"; };
+		9EF6E3F1FB9EC741DDE89F903AE74E60 /* LayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutSupport.swift; path = Cartography/LayoutSupport.swift; sourceTree = "<group>"; };
 		AA242ED3326C6CFEC5A30BAD589E2D93 /* Pods-WeLoveCatsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeLoveCatsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD3A4449262DA416CE254E174380E257 /* Pods-WeLoveCatsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeLoveCatsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BFD10677BDE76EF99969AA34217F9388 /* Pods-WeLoveCats-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WeLoveCats-resources.sh"; sourceTree = "<group>"; };
+		C0ACEDB161A4797D6EEFC4F790099345 /* Priority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Priority.swift; path = Cartography/Priority.swift; sourceTree = "<group>"; };
 		C44FB5EBAA6AFD239B3DCF9CCD6BC051 /* Pods-WeLoveCatsTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeLoveCatsTests-umbrella.h"; sourceTree = "<group>"; };
-		C9715EC9A2E178C2756363E77D1C605D /* Pods_WeLoveCats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WeLoveCats.framework; path = "Pods-WeLoveCats.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C54CBE751D040FA098C71570C15EE188 /* Pods_WeLoveCats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WeLoveCats.framework; path = "Pods-WeLoveCats.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9592FA99854F4CE27000C2DC8FF3CF3 /* Constrain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constrain.swift; path = Cartography/Constrain.swift; sourceTree = "<group>"; };
 		CDB4B1AD6C6B852E138A466BFD90175E /* Pods-WeLoveCatsUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WeLoveCatsUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D606E96564743DB0DF8FCED36FD4B7A7 /* Dimension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dimension.swift; path = Cartography/Dimension.swift; sourceTree = "<group>"; };
+		D7E4CD399DBE659C2ACC27682C6037A4 /* Pods_WeLoveCatsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WeLoveCatsUITests.framework; path = "Pods-WeLoveCatsUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D83E525E9A54CDD0B28A196C7621F590 /* ConstraintGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintGroup.swift; path = Cartography/ConstraintGroup.swift; sourceTree = "<group>"; };
+		D9831F22C8E22002F58271FB9E67DFD0 /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Cartography/Expression.swift; sourceTree = "<group>"; };
+		DB27A81074C4AB335F28B4CE15422DB4 /* Cartography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cartography.framework; path = Cartography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE9EC4C757DBCE8EC019BF49AEFE4564 /* Edge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edge.swift; path = Cartography/Edge.swift; sourceTree = "<group>"; };
 		E87ED7DEE9695486CF44DF0ED8AC3709 /* Pods-WeLoveCats-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeLoveCats-umbrella.h"; sourceTree = "<group>"; };
 		E8BE28DD8A2DC33E7BAC290BE47F3546 /* Pods-WeLoveCatsUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeLoveCatsUITests-dummy.m"; sourceTree = "<group>"; };
 		EA018653CA9D76A698D345256DE7AB2B /* Pods-WeLoveCatsTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WeLoveCatsTests-frameworks.sh"; sourceTree = "<group>"; };
+		EDBD5D708D30E3F57E8C9ECFD4F6BC60 /* Cartography.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cartography.xcconfig; sourceTree = "<group>"; };
 		FE3179B6F6A75226C0FEAD7E3E87D867 /* Pods-WeLoveCatsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeLoveCatsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FF4388DB9A7222AD62410EF7AFA2455B /* Pods-WeLoveCatsTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeLoveCatsTests-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6804B6568C633A0149EB773919DC4939 /* Frameworks */ = {
+		678B017A7AA050187B8CD2B43FF6D3E1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1306083A22456E11924E10EB2D0B245F /* Foundation.framework in Frameworks */,
+				C8B256F023253D487CA1BA8DFE7D0BA0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A4AAE12E09D29DA5F684C9BD8B5FE3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FBD4B684936450BD7CD0155347BB4EA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +154,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2ABEAD923320382240F89398A802503C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A45AB4BA868E6A22C89EC1ECD941016 /* Cartography.modulemap */,
+				EDBD5D708D30E3F57E8C9ECFD4F6BC60 /* Cartography.xcconfig */,
+				0CE97589138731C11804510B0115DAA4 /* Cartography-dummy.m */,
+				59FD051E7B7FEE3DD7C60815B63C33BE /* Cartography-prefix.pch */,
+				8342D1F76402CC736E7F3B64D5B0AF7A /* Cartography-umbrella.h */,
+				39B905D6F8A6F41DE7C3570416E6FC31 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Cartography";
+			sourceTree = "<group>";
+		};
+		42CA6C4D753646FF575CDF8DA9E99BB9 /* Cartography */ = {
+			isa = PBXGroup;
+			children = (
+				3F430318810F981930595CBFAA3800CB /* Align.swift */,
+				099B41F154B627B59912C0C6C9B32AFE /* Coefficients.swift */,
+				42BF9D30A7D79EA0B749B084D52331BC /* Compound.swift */,
+				C9592FA99854F4CE27000C2DC8FF3CF3 /* Constrain.swift */,
+				722F287D12FECC556BB6057BB76E87CF /* Constraint.swift */,
+				D83E525E9A54CDD0B28A196C7621F590 /* ConstraintGroup.swift */,
+				202A04C706F45EC3E6A8E98A55EE95A1 /* Context.swift */,
+				D606E96564743DB0DF8FCED36FD4B7A7 /* Dimension.swift */,
+				23AB8A3D61D9F977FA15E2F3C78CB79B /* Distribute.swift */,
+				DE9EC4C757DBCE8EC019BF49AEFE4564 /* Edge.swift */,
+				2D365FAC962F7716E8BE2862F60AAE09 /* Edges.swift */,
+				D9831F22C8E22002F58271FB9E67DFD0 /* Expression.swift */,
+				8A12A8BE5E12427836BC20731B59CC4C /* Extensions.swift */,
+				6B6E4CF523C6C377E60834CD9A194C90 /* LayoutProxy.swift */,
+				9EF6E3F1FB9EC741DDE89F903AE74E60 /* LayoutSupport.swift */,
+				38E50FB36FB9D722735A574243EF6FE1 /* Point.swift */,
+				C0ACEDB161A4797D6EEFC4F790099345 /* Priority.swift */,
+				0DDCF78CBF68D57A888B39C1FDC4B63F /* Property.swift */,
+				87F91DA0120F16DF151739A06D03ED8B /* Size.swift */,
+				9967B43FC984467CE65671A518AB59AB /* View.swift */,
+				32E558DCCD834906B5CBB7899487C0CF /* ViewUtils.swift */,
+				2ABEAD923320382240F89398A802503C /* Support Files */,
+			);
+			name = Cartography;
+			path = Cartography;
+			sourceTree = "<group>";
+		};
 		5B5CA8CF2C1338ED3B3CE4DFEF1B408F /* Pods-WeLoveCatsTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,17 +239,19 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				98B68DFF8EBAF382397E779EFF711E90 /* Products */,
+				C3A8124013EB3EC5D0EE8AAC411E5B26 /* Pods */,
+				AA9B64D47222C6C9841F062D2DA688DD /* Products */,
 				B5527C34CEA2284BE0D93BA6C9CD9347 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		98B68DFF8EBAF382397E779EFF711E90 /* Products */ = {
+		AA9B64D47222C6C9841F062D2DA688DD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C9715EC9A2E178C2756363E77D1C605D /* Pods_WeLoveCats.framework */,
-				0AAC6D5BF1159846AC666D2EDF703946 /* Pods_WeLoveCatsTests.framework */,
-				33FFA75C895B3873DF26BCC724AA6352 /* Pods_WeLoveCatsUITests.framework */,
+				DB27A81074C4AB335F28B4CE15422DB4 /* Cartography.framework */,
+				C54CBE751D040FA098C71570C15EE188 /* Pods_WeLoveCats.framework */,
+				6C9B97246EAEFE1A093421A17B3A2202 /* Pods_WeLoveCatsTests.framework */,
+				D7E4CD399DBE659C2ACC27682C6037A4 /* Pods_WeLoveCatsUITests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,6 +272,14 @@
 				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3A8124013EB3EC5D0EE8AAC411E5B26 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42CA6C4D753646FF575CDF8DA9E99BB9 /* Cartography */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
@@ -203,11 +327,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA78A2A1C5C958A54ED83BC5681C475A /* Headers */ = {
+		7C32058C58BCA3ED72F5FDD63510734D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3D78D08078340069837B3133A139FE3 /* Pods-WeLoveCats-umbrella.h in Headers */,
+				8B86853FF78B888FB426355F716B81D7 /* Pods-WeLoveCats-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E66E0C3AA6C50C06CA3BC63165901BDD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE4D13CA6A4999D13875761E5100C1A0 /* Cartography-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,7 +360,42 @@
 			);
 			name = "Pods-WeLoveCatsTests";
 			productName = "Pods-WeLoveCatsTests";
-			productReference = 0AAC6D5BF1159846AC666D2EDF703946 /* Pods_WeLoveCatsTests.framework */;
+			productReference = 6C9B97246EAEFE1A093421A17B3A2202 /* Pods_WeLoveCatsTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		544212980401A6DA7806F65EAD8C6637 /* Cartography */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4640A3FD22DAF78390468CA450BB29DA /* Build configuration list for PBXNativeTarget "Cartography" */;
+			buildPhases = (
+				F8A87B475BE2E0CA1FFEC5F03DEDB801 /* Sources */,
+				7A4AAE12E09D29DA5F684C9BD8B5FE3B /* Frameworks */,
+				E66E0C3AA6C50C06CA3BC63165901BDD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cartography;
+			productName = Cartography;
+			productReference = DB27A81074C4AB335F28B4CE15422DB4 /* Cartography.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7D0BFB62CB7CF3F0E40AB48D887754E4 /* Pods-WeLoveCats */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B900A95662C6D449F2124C9E27F56844 /* Build configuration list for PBXNativeTarget "Pods-WeLoveCats" */;
+			buildPhases = (
+				C29D600496F414A1A38719FB8CA4964F /* Sources */,
+				678B017A7AA050187B8CD2B43FF6D3E1 /* Frameworks */,
+				7C32058C58BCA3ED72F5FDD63510734D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63CB9EA93F05ADA184776D42DFF677F1 /* PBXTargetDependency */,
+			);
+			name = "Pods-WeLoveCats";
+			productName = "Pods-WeLoveCats";
+			productReference = C54CBE751D040FA098C71570C15EE188 /* Pods_WeLoveCats.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		89B89933921240554B6067400049CE10 /* Pods-WeLoveCatsUITests */ = {
@@ -245,24 +412,7 @@
 			);
 			name = "Pods-WeLoveCatsUITests";
 			productName = "Pods-WeLoveCatsUITests";
-			productReference = 33FFA75C895B3873DF26BCC724AA6352 /* Pods_WeLoveCatsUITests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		EFE598459147DFD3875B892422F2ABB9 /* Pods-WeLoveCats */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F3796533CBBEDF145AAED9A6924DB087 /* Build configuration list for PBXNativeTarget "Pods-WeLoveCats" */;
-			buildPhases = (
-				C5505E011C42D99E04737FA0E85A26D2 /* Sources */,
-				6804B6568C633A0149EB773919DC4939 /* Frameworks */,
-				FA78A2A1C5C958A54ED83BC5681C475A /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-WeLoveCats";
-			productName = "Pods-WeLoveCats";
-			productReference = C9715EC9A2E178C2756363E77D1C605D /* Pods_WeLoveCats.framework */;
+			productReference = D7E4CD399DBE659C2ACC27682C6037A4 /* Pods_WeLoveCatsUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -282,11 +432,12 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 98B68DFF8EBAF382397E779EFF711E90 /* Products */;
+			productRefGroup = AA9B64D47222C6C9841F062D2DA688DD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EFE598459147DFD3875B892422F2ABB9 /* Pods-WeLoveCats */,
+				544212980401A6DA7806F65EAD8C6637 /* Cartography */,
+				7D0BFB62CB7CF3F0E40AB48D887754E4 /* Pods-WeLoveCats */,
 				191D1549B0E47A20A1C4CDDF84FB82EB /* Pods-WeLoveCatsTests */,
 				89B89933921240554B6067400049CE10 /* Pods-WeLoveCatsUITests */,
 			);
@@ -310,17 +461,93 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C5505E011C42D99E04737FA0E85A26D2 /* Sources */ = {
+		C29D600496F414A1A38719FB8CA4964F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61FB2726D8F2112D5427F5A03561CC89 /* Pods-WeLoveCats-dummy.m in Sources */,
+				9613304482D831283A7CC38CE9B11F77 /* Pods-WeLoveCats-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8A87B475BE2E0CA1FFEC5F03DEDB801 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				067B84F7E9EFBEAFDC824931CAAD2051 /* Align.swift in Sources */,
+				AE7ACD648B84D1C8645049118FE42D54 /* Cartography-dummy.m in Sources */,
+				FC27B916EC313A166CE2704745CB14C0 /* Coefficients.swift in Sources */,
+				5F5D3FB5718F4673DC293DA7D97EF046 /* Compound.swift in Sources */,
+				3F2391D80C5AE124D6E13AD3FABFFE01 /* Constrain.swift in Sources */,
+				C2E2993258D9072061A389E518053F8B /* Constraint.swift in Sources */,
+				5CAA19E0EB7CA9EB6047A3E43EC1FC8F /* ConstraintGroup.swift in Sources */,
+				9C7E8D85506FA06C506A330B200FCEE7 /* Context.swift in Sources */,
+				DBC0D8FEB6A8101C977332E8BC16E641 /* Dimension.swift in Sources */,
+				7965A04590F67375EC65249F774B3F6B /* Distribute.swift in Sources */,
+				CD587D5E28B0428E3B4163F1604D26BF /* Edge.swift in Sources */,
+				A084DDD7233A950676D60FCB4FA8BE74 /* Edges.swift in Sources */,
+				697414FCC3C6F8176768FFDDEC73A108 /* Expression.swift in Sources */,
+				A67286FF819C5C943D027E9C40DF456D /* Extensions.swift in Sources */,
+				1431619A2565DD8EAB817240E078707C /* LayoutProxy.swift in Sources */,
+				56EBA0C77344F63CA6A36265A6496A71 /* LayoutSupport.swift in Sources */,
+				88B21B225B2D6BFAB3F50B88495299F1 /* Point.swift in Sources */,
+				22B60CFF6E57EB6DF8CCA5D2CAC3178C /* Priority.swift in Sources */,
+				A7BD4B74A484170A23FF6C7611A11B40 /* Property.swift in Sources */,
+				74BD0664EEC77366D314DA22DD4E721F /* Size.swift in Sources */,
+				05C1C6C0B246E3C5FDF06B2A0BB63F0D /* View.swift in Sources */,
+				9B71D4856DF9CFE5715EDF4E5B3B2844 /* ViewUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		63CB9EA93F05ADA184776D42DFF677F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Cartography;
+			target = 544212980401A6DA7806F65EAD8C6637 /* Cartography */;
+			targetProxy = F96535049D5FF594692C03D84D0CC5EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		02DA0AC1E96B3AB71426BB590737ABF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EE45019FAA258E7C0D44F55C66849C9 /* Pods-WeLoveCats.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-WeLoveCats/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WeLoveCats/Pods-WeLoveCats.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_WeLoveCats;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		07FEF097C8947249A058E2F6381CE77C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AA242ED3326C6CFEC5A30BAD589E2D93 /* Pods-WeLoveCatsTests.debug.xcconfig */;
@@ -356,42 +583,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		1815032F86989324C9EC039952E57734 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EE45019FAA258E7C0D44F55C66849C9 /* Pods-WeLoveCats.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-WeLoveCats/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-WeLoveCats/Pods-WeLoveCats.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_WeLoveCats;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		311CB73C0E25907C11677905C15DED95 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -521,6 +712,80 @@
 			};
 			name = Debug;
 		};
+		44754BD58E01425AB39CE91D2CE60DCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3404180365BC4BB67EC74B47B7CD48B3 /* Pods-WeLoveCats.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-WeLoveCats/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WeLoveCats/Pods-WeLoveCats.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_WeLoveCats;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BA43C13AEDBF96B3C1DE52C629FBEC9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDBD5D708D30E3F57E8C9ECFD4F6BC60 /* Cartography.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Cartography/Cartography-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cartography/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Cartography/Cartography.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Cartography;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		C8C730A794A9E49CF6BBAC277B913BA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AD3A4449262DA416CE254E174380E257 /* Pods-WeLoveCatsUITests.debug.xcconfig */;
@@ -593,41 +858,39 @@
 			};
 			name = Release;
 		};
-		F1817E9780843903B4281F5CAE737C98 /* Debug */ = {
+		DAFEB9AD91EF13A99946C5FD7749F92C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3404180365BC4BB67EC74B47B7CD48B3 /* Pods-WeLoveCats.debug.xcconfig */;
+			baseConfigurationReference = EDBD5D708D30E3F57E8C9ECFD4F6BC60 /* Cartography.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-WeLoveCats/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Cartography/Cartography-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cartography/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-WeLoveCats/Pods-WeLoveCats.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_WeLoveCats;
+				MODULEMAP_FILE = "Target Support Files/Cartography/Cartography.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Cartography;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -650,6 +913,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		4640A3FD22DAF78390468CA450BB29DA /* Build configuration list for PBXNativeTarget "Cartography" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA43C13AEDBF96B3C1DE52C629FBEC9C /* Debug */,
+				DAFEB9AD91EF13A99946C5FD7749F92C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		915A3424BA8A40C82FDA9065C37CFDF7 /* Build configuration list for PBXNativeTarget "Pods-WeLoveCatsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -659,11 +931,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F3796533CBBEDF145AAED9A6924DB087 /* Build configuration list for PBXNativeTarget "Pods-WeLoveCats" */ = {
+		B900A95662C6D449F2124C9E27F56844 /* Build configuration list for PBXNativeTarget "Pods-WeLoveCats" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F1817E9780843903B4281F5CAE737C98 /* Debug */,
-				1815032F86989324C9EC039952E57734 /* Release */,
+				44754BD58E01425AB39CE91D2CE60DCF /* Debug */,
+				02DA0AC1E96B3AB71426BB590737ABF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
