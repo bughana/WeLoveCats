@@ -19,7 +19,7 @@ enum CatListType {
         case .all:
             return .getCatImages
         case .favourites:
-            return .getCatImages
+            return .getFavourites
         }
     }
 }

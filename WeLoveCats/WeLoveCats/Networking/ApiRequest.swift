@@ -11,12 +11,15 @@ enum ApiRequest {
     static let apiKey = "MjQ2MTkz"
     
     case getCatImages
+    case getFavourites
     
     internal var urlRequest: URLRequest? {
         let result: (path: String, parameters: [String: AnyObject]?) = {
             switch self {
             case .getCatImages:
                 return ("/get?api_key=\(ApiRequest.apiKey)&format=xml&results_per_page=20", nil)
+            case .getFavourites:
+                return ("/getfavourites?api_key=\(ApiRequest.apiKey)", nil)
             }
         }()
         
