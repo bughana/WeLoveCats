@@ -1,17 +1,11 @@
-//
-//  FirstViewController.swift
-//  WeLoveCats
-//
-//  Created by Hannah Teuteberg on 23.11.17.
-//  Copyright © 2017 Bughana. All rights reserved.
-//
 
 import UIKit
 import Cartography
 
-class FirstViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class CatListController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     private let cellIdentifier = "CatListCell"
+    private var viewModel: CatListViewModel!
     
     // MARK: - View lifecycle
     override func viewDidLoad() {
@@ -23,6 +17,13 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
         constrain(collectionView, view) { collectionView, superview in
             collectionView.edges == superview.edges
         }
+        
+        viewModel.getCatImageUrls()
+    }
+    
+    // MARK: - Public: Setup
+    func setup(with viewModel: CatListViewModel) {
+        self.viewModel = viewModel
     }
     
     // MARK: - Collection view
@@ -63,7 +64,7 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     }()
 }
 
-extension FirstViewController: UICollectionViewDelegateFlowLayout {
+extension CatListController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
