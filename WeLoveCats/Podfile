@@ -7,7 +7,7 @@ target 'WeLoveCats' do
 
   # Pods for WeLoveCats
   pod 'Cartography'
-  pod 'Kingfisher'
+  pod 'Kingfisher', '~> 4.3'
 
   target 'WeLoveCatsTests' do
     inherit! :search_paths
