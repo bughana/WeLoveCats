@@ -18,7 +18,7 @@ class CatListController: UIViewController, UICollectionViewDataSource, UICollect
         view.addSubview(collectionView)
         constrainSubviews()
         
-        viewModel.getCatImageUrls() { [weak self] shouldReload in
+        viewModel.getCatImages() { [weak self] shouldReload in
             if shouldReload {
                 self?.collectionView.reloadData()
             }
@@ -36,16 +36,20 @@ class CatListController: UIViewController, UICollectionViewDataSource, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.imageUrls.count
+        return viewModel.catImages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! CatListCell
         
-        let url = viewModel.imageUrls[indexPath.row]
+        let url = viewModel.catImages[indexPath.row].url
         cell.imageView.setImageWithUrl(url, completion: nil)
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
     }
     
     // MARK: - Private: Autolayout

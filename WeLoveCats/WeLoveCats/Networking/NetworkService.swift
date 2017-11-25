@@ -8,7 +8,7 @@ class NetworkService {
     func apiOperation(_ apiRequest: ApiRequest, completion: @escaping (ApiRequestResult) -> ()) {
         
         guard let urlRequest = apiRequest.urlRequest else {
-            completion(ApiRequestResult(imageUrls: nil, error: NSError(domain: "NetworkService", code: 2000, userInfo: ["description": "No UrlRequest"])))
+            completion(ApiRequestResult(catImages: nil, error: NSError(domain: "NetworkService", code: 2000, userInfo: ["description": "No UrlRequest"])))
             return
         }
         let task = urlDataTask(forUrlRequest: urlRequest, completion: completion)
@@ -21,43 +21,50 @@ class NetworkService {
             (data, response, error) -> Void in
             guard error == nil else {
                 DispatchQueue.main.async(execute: {
-                    completion(ApiRequestResult(imageUrls: nil, error: error))
+                    completion(ApiRequestResult(catImages: nil, error: error))
                 })
                 return
             }
             
             guard let safeData = data else {
                 DispatchQueue.main.async(execute: {
-                    completion(ApiRequestResult(imageUrls: nil, error: NSError(domain: "NetworkService", code: 1001, userInfo: ["message": "Data can not be converted to URL array"])))
+                    completion(ApiRequestResult(catImages: nil, error: NSError(domain: "NetworkService", code: 1001, userInfo: ["message": "Data can not be converted to URL array"])))
                 })
                 return
             }
             
             DispatchQueue.main.async(execute: {
-                let urls = self.parseXml(data: safeData)
-                completion(ApiRequestResult(imageUrls: urls, error: nil))
+                let images = self.parseXml(data: safeData)
+                completion(ApiRequestResult(catImages: images, error: nil))
             })
         })
     }
     
-    private func parseXml(data: Data) -> [URL] {
+    private func parseXml(data: Data) -> [CatImage] {
         do {
-            var urls: [URL] = []
+            var catImages: [CatImage] = []
             let doc = try XMLDocument(data: data)
             guard let root = doc.root,
                 let data = root.children.first,
                 let images = data.children.first else { return [] }
             for image in images.children {
+                var imageUrl: URL?
+                var id: String?
                 for attribute in image.children {
                     if attribute.tag == "url" {
                         let urlStr = attribute.stringValue
                         if let url = URL(string: urlStr) {
-                            urls.append(url)
+                            imageUrl = url
                         }
+                    } else if attribute.tag == "id" {
+                        id = attribute.stringValue
                     }
                 }
+                if let imageUrl = imageUrl, let id = id {
+                    catImages.append(CatImage(url: imageUrl, id: id))
+                }
             }
-            return urls
+            return catImages
         } catch { }
         return []
     }

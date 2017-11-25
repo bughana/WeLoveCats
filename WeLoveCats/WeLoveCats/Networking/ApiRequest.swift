@@ -2,7 +2,7 @@
 import Foundation
 
 struct ApiRequestResult {
-    let imageUrls: [URL]?
+    let catImages: [CatImage]?
     let error: Error?
 }
 

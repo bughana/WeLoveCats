@@ -26,7 +26,7 @@ enum CatListType {
 
 class CatListViewModel {
     
-    var imageUrls: [URL] = []
+    var catImages: [CatImage] = []
     
     var pageTitle: String {
         return type.pageTitle
@@ -40,15 +40,15 @@ class CatListViewModel {
         self.type = type
     }
     
-    func getCatImageUrls(_ completion: @escaping (_ shouldReload: Bool) -> ()) {
-        getCatImageUrls(for: type, completion)
+    func getCatImages(_ completion: @escaping (_ shouldReload: Bool) -> ()) {
+        getCatImages(for: type, completion)
     }
     
     // MARK: - Private Helper
-    private func getCatImageUrls(for type: CatListType, _ completion: @escaping (_ shouldReload: Bool) -> ()) {
+    private func getCatImages(for type: CatListType, _ completion: @escaping (_ shouldReload: Bool) -> ()) {
         networkService.apiOperation(type.apiRequest) { [weak self] result in
-            if let urls = result.imageUrls {
-                self?.imageUrls = urls
+            if let catImages = result.catImages {
+                self?.catImages = catImages
                 completion(true)
             }
         }
