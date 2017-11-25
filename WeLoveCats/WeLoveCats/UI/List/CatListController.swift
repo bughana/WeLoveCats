@@ -1,11 +1,28 @@
 
 import UIKit
 import Cartography
+import RxSwift
 
-class CatListController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class MainCatListController: CatListController<CatListViewModel> {}
+
+class LikesCatListController: CatListController<LikesCatListViewModel> {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getDataAndReload()
+    }
+}
+
+class CatListController<T: CatListViewModel>: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     private let cellIdentifier = "CatListCell"
-    private var viewModel: CatListViewModel!
+    private let disposeBag = DisposeBag()
+    fileprivate var viewModel: T
+    
+    init(viewModel: T) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
     
     // MARK: - View lifecycle
     override func viewDidLoad() {
@@ -23,11 +40,10 @@ class CatListController: UIViewController, UICollectionViewDataSource, UICollect
                 self?.collectionView.reloadData()
             }
         }
-    }
-    
-    // MARK: - Public: Setup
-    func setup(with viewModel: CatListViewModel) {
-        self.viewModel = viewModel
+        
+        viewModel.likesChangedObservable.subscribe(onNext: { [weak self] in
+            self?.collectionView.reloadData()
+        }).disposed(by: disposeBag)
     }
     
     // MARK: - Collection view
@@ -43,13 +59,33 @@ class CatListController: UIViewController, UICollectionViewDataSource, UICollect
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! CatListCell
         
         let url = viewModel.catImages[indexPath.row].url
-        cell.imageView.setImageWithUrl(url, completion: nil)
+        let isLiked = viewModel.isLiked(at: indexPath)
+        cell.setup(with: url, isLiked: isLiked)
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.toggleLike(at: indexPath.row)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
+        let screenWidth = UIScreen.main.bounds.width
+        let width = (screenWidth / 3.0) - 7
+        let cellWidth = screenWidth > 0 ? width : 0
+        let cellSize = CGSize(width: cellWidth, height: cellWidth)
+        
+        return cellSize
+    }
+    
+    // MARK: - Private: Get data
+    fileprivate func getDataAndReload() {
+        viewModel.getCatImages() { [weak self] shouldReload in
+            if shouldReload {
+                self?.collectionView.reloadData()
+            }
+        }
     }
     
     // MARK: - Private: Autolayout
@@ -100,17 +136,8 @@ class CatListController: UIViewController, UICollectionViewDataSource, UICollect
         
         return layout
     }()
-}
-
-extension CatListController: UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let screenWidth = UIScreen.main.bounds.width
-        let width = (screenWidth / 3.0) - 7
-        let cellWidth = screenWidth > 0 ? width : 0
-        let cellSize = CGSize(width: cellWidth, height: cellWidth)
-        
-        return cellSize
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }

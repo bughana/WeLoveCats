@@ -4,6 +4,8 @@ import Fuzi
 
 class NetworkService {
     
+    static let sharedInstance = NetworkService()
+    
     // MARK: - Public: Get api operation
     func apiOperation(_ apiRequest: ApiRequest, completion: @escaping (ApiRequestResult) -> ()) {
         

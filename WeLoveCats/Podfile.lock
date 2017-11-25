@@ -2,17 +2,20 @@ PODS:
   - Cartography (1.1.0)
   - Fuzi (2.0.1)
   - Kingfisher (4.3.1)
+  - RxSwift (4.0.0)
 
 DEPENDENCIES:
   - Cartography
   - Fuzi (~> 2.0)
   - Kingfisher (~> 4.3)
+  - RxSwift (~> 4.0)
 
 SPEC CHECKSUMS:
   Cartography: 0538ccb4044acbbda2266335fc58cb4228794d90
   Fuzi: f64983dea705491d3aedd32351247a09523e7efd
   Kingfisher: 75541c4b62f02e1fde6f9772303de3d9ebe8f5b3
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
 
-PODFILE CHECKSUM: ffafd8b0ac794cbb2d04bb63d55e560e6dc71b90
+PODFILE CHECKSUM: a34aec915fabe975e8cb92a01aa870abd493fc1a
 
 COCOAPODS: 1.2.1

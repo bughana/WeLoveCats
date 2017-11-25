@@ -8,8 +8,14 @@ class CatListCell: UICollectionViewCell {
         super.init(frame: frame)
         
         addSubview(imageView)
-        addSubview(likeButton)
+        addSubview(likeImageView)
         constrainSubviews()
+    }
+    
+    func setup(with url: URL, isLiked: Bool) {
+        imageView.setImageWithUrl(url, completion: nil)
+        let image = isLiked ? UIImage(named: "likeFilled") : UIImage(named: "like")
+        likeImageView.image = image
     }
     
     // MARK: - Private: Autolayout
@@ -18,14 +24,14 @@ class CatListCell: UICollectionViewCell {
             imageView.edges == superview.edges
         }
         
-        constrain(likeButton, self) { likeButton, superview in
-            likeButton.right == superview.right - 10
-            likeButton.bottom == superview.bottom - 10
+        constrain(likeImageView, self) { likeImageView, superview in
+            likeImageView.right == superview.right - 10
+            likeImageView.bottom == superview.bottom - 10
         }
     }
     
     // MARK: - Subviews
-    lazy var imageView: UIImageView = {
+    private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         
         imageView.backgroundColor = .lightGray
@@ -35,13 +41,12 @@ class CatListCell: UICollectionViewCell {
         return imageView
     }()
     
-    private lazy var likeButton: UIButton = {
-        let likeButton = UIButton()
+    private lazy var likeImageView: UIImageView = {
+        let likeImageView = UIImageView()
         
-        likeButton.setImage(UIImage(named: "like"), for: .normal)
-        likeButton.setImage(UIImage(named: "likeFilled"), for: .selected)
+        likeImageView.image = UIImage(named: "like")
         
-        return likeButton
+        return likeImageView
     }()
     
     required init?(coder aDecoder: NSCoder) {

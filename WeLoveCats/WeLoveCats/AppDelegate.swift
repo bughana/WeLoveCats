@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  WeLoveCats
-//
-//  Created by Hannah Teuteberg on 23.11.17.
-//  Copyright © 2017 Bughana. All rights reserved.
-//
 
 import UIKit
 
@@ -19,15 +12,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func setupCatLists() {
-        guard let rootController = window?.rootViewController as? UITabBarController, let catList = rootController.viewControllers?.first as? CatListController else { return }
+        let root = UITabBarController()
+        let catListViewModel = CatListViewModel()
+        let catList = MainCatListController(viewModel: catListViewModel)
+        catList.tabBarItem = UITabBarItem(title: "Cat List", image: UIImage(named: "first"), tag: 1)
         
-        let catListViewModel = CatListViewModel(type: .all)
-        catList.setup(with: catListViewModel)
+        let likedCatListViewModel = LikesCatListViewModel()
+        let likedCatList = LikesCatListController(viewModel: likedCatListViewModel)
+        likedCatList.tabBarItem = UITabBarItem(title: "My Favourties", image: UIImage(named: "second"), tag: 2)
         
-        guard let favourites = rootController.viewControllers?.last as? CatListController else { return }
-        
-        let favoritesViewModel = CatListViewModel(type: .favourites)
-        favourites.setup(with: favoritesViewModel)
+        root.setViewControllers([catList, likedCatList], animated: false)
+        window?.rootViewController = root
     }
 }
 

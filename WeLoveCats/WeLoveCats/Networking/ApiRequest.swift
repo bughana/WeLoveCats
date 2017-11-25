@@ -12,6 +12,8 @@ enum ApiRequest {
     
     case getCatImages
     case getFavourites
+    case likeImage(imageId: String)
+    case unlikeImage(imageId: String)
     
     internal var urlRequest: URLRequest? {
         let result: (path: String, parameters: [String: AnyObject]?) = {
@@ -20,6 +22,10 @@ enum ApiRequest {
                 return ("/get?api_key=\(ApiRequest.apiKey)&format=xml&results_per_page=20", nil)
             case .getFavourites:
                 return ("/getfavourites?api_key=\(ApiRequest.apiKey)", nil)
+            case .likeImage(let id):
+                return ("/favourite?api_key=\(ApiRequest.apiKey)&image_id=\(id)&action=add", nil)
+            case .unlikeImage(let id):
+                return ("/favourite?api_key=\(ApiRequest.apiKey)&image_id=\(id)&action=remove", nil)
             }
         }()
         
